@@ -1,0 +1,2 @@
+DataProvider: mongodb
+DataConnectionString: mongodb://goldensweets:goldensweets@goldensweets-shard-00-00-zumqp.mongodb.net:27017,goldensweets-shard-00-01-zumqp.mongodb.net:27017,goldensweets-shard-00-02-zumqp.mongodb.net:27017/goldensweets?ssl=true&replicaSet=goldensweets-shard-0&authSource=admin&retryWrites=true

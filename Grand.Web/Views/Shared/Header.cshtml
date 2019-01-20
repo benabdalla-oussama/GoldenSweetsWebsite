@@ -1,0 +1,141 @@
+﻿<header>
+    @await Component.InvokeAsync("Widget", new { widgetZone = "header" })
+    <nav class="navbar fixed-top navbar-light bg-dark navUp p-0">
+        <ul class="mobile-top-menu d-lg-none d-flex mb-0 w-100">
+            @*<li class="logo-mobile"><span class="logo-mobile-holder"></span></li>*@
+            <li class="nav-item d-flex align-items-center d-lg-none mobile-search" data-toggle="modal" data-target="#searchModal">
+                <a class="nav-link">
+                    <span class="fa fa-search"></span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav header-links flex-row container px-lg-3 ">
+            <li class="nav-item col mobile-menu-button d-lg-none align-self-center">
+                <a id="mobile-menu-opener"><span></span><span></span><span></span></a>
+                <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("menu")</span>
+            </li>
+            <li class="nav-item float-xs-right d-lg-none d-none ml-auto">
+                <a class="btn btn-outlined-info general-opener" data-toggle="collapse" aria-expanded="false">
+                    <span class="fa fa-cogs" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li class="nav-item float-xs-right d-none d-lg-block mr-auto dropdowns-container">
+                <div class="generalDropDown btn-toolbar float-xs-right">
+                    @await Component.InvokeAsync("TaxTypeSelector")
+                    @await Component.InvokeAsync("CurrencySelector")
+                    @await Component.InvokeAsync("LanguageSelector")
+                    @await Component.InvokeAsync("StoreSelector")
+                    @await Component.InvokeAsync("Widget", new { widgetZone = "header_selectors" })
+                </div>
+            </li>
+            @await Component.InvokeAsync("HeaderLinks")
+        </ul>
+        <div class="collapse navbar-collapse" id="mobile-collapsing-menu">
+            <div class="col-12 options-container">
+                <div class="row justify-content-center mobile-header-container">
+                    <div class="header-links-append"></div>
+                </div>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+        <div class="headBottom d-flex align-items-center d-lg-inline-flex text-lg-left text-center mt-0 mb-0">
+
+            <div class="header-logo pr-0 pl-0 d-lg-block d-none" align="center">
+                <span class="logo-desktop-holder"></span>
+                @await Component.InvokeAsync("Logo")
+            </div>
+
+            @*<div class="header-logo pr-0 pl-0 d-lg-block d-none" align="center">
+            <ol class="d-flex flex-row list-group justify-content-center justify-content-lg-start flex-wrap list-pad pb-0" style="margin-left:150px;">
+                <li class="list-group-item facebook">
+                    <a title="facebook" href="https://www.facebook.com/goldensweets.tunisia/" target="_blank">
+                        <span class="sr-only">Facebook</span>
+                        <span class="fab fa-facebook-square fa-2x" style="color:#c4b78a"></span>
+                    </a>
+                </li>
+                <li class="list-group-item twitter">
+                    <a title="twitter" href="https://www.facebook.com/goldensweets.tunisia/" target="_blank">
+                        <span class="sr-only">Twitter</span>
+                        <span class="fab fa-twitter-square fa-2x" style="color:#c4b78a"></span>
+                    </a>
+                </li>
+                <li class="list-group-item rss">
+                    <a href="/news/rss/5c412292b99b36627c6aa3ad">
+                        <span class="fa fa-rss fa-2x" style="color:#c4b78a"></span>
+                        <span class="sr-only">RSS</span>
+                    </a>
+                </li>
+            </ol>
+        </div>*@
+
+            
+
+            <div class="col-lg-6 col formSearch ml-auto pr-0 d-none d-lg-block">
+                @await Component.InvokeAsync("SearchBox")
+            </div>
+
+            <div class="shopbar-col-group shopbar-col-group-tools ml-auto pr-0 d-none d-lg-block" style="margin-left:50px;">
+                <!-- TOOLS -->
+
+
+                <div class="shopbar-col shopbar-tools" data-summary-href="/frontend/en/ShoppingCart/CartSummary?cart=True&amp;wishlist=True&amp;compare=True">
+
+
+
+
+
+
+
+                    <div class="shopbar-tool" id="shopbar-wishlist" data-target="#wishlist-tab">
+                        <a href="@Url.RouteUrl("Wishlist")" class="shopbar-button navbar-toggler" data-toggle="offcanvas" data-summary-href="/frontend/en/ShoppingCart/CartSummary?wishlist=True" data-autohide="true" data-placement="right" data-fullscreen="false" data-disablescrolling="true" data-target="#offcanvas-cart">
+                            <span class="shopbar-button-icon">
+                                <i class="icm icm-heart"></i>
+                                <span class="badge badge-pill label-cart-amount badge-warning" style="display:none" data-bind-to="WishlistItemsCount">0</span>
+                            </span>
+                            <span class="shopbar-button-label">
+                                <span>Wish</span><br>
+                                <strong>List</strong>
+                            </span>
+                            <span class="shopbar-button-label-sm">
+                                Wishlist
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="shopbar-tool" id="topcartlink" data-target="#cart-tab">
+                        <a  class="shopbar-button navbar-toggler" data-toggle="offcanvas" data-summary-href="/frontend/en/ShoppingCart/CartSummary?cart=True" data-autohide="true" data-placement="right" data-fullscreen="false" data-disablescrolling="true" data-target="#offcanvas-cart">
+                            <span class="shopbar-button-icon">
+                                <i class="icm icm-bag"></i>
+                                <span class="badge badge-pill label-cart-amount badge-warning" style="display:none" data-bind-to="CartItemsCount">0</span>
+                            </span>
+                            <span class="shopbar-button-label">
+                                <span>Shopping</span><br>
+                                <strong>Basket</strong>
+                            </span>
+                            <span class="shopbar-button-label-sm">
+                                Basket
+                            </span>
+                        </a>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+</header>

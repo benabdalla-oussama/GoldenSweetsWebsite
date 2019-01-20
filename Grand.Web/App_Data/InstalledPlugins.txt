@@ -1,0 +1,14 @@
+DiscountRequirements.Standard
+CurrencyExchange.MoneyConverter
+Payments.CashOnDelivery
+Payments.CheckMoneyOrder
+Payments.PayInStore
+Payments.PayPalStandard
+PromotionFeed.GoogleShopping
+Shipping.FixedRate
+Shipping.ByWeight
+Shipping.ShippingPoint
+Tax.FixedRate
+Tax.CountryStateZip
+Widgets.Slider
+Widgets.GoogleAnalytics
