@@ -305,7 +305,7 @@ footer {
 }
 .mainNav a {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
 }
 .navUp li a span.fa {
     margin-right: 2px;
@@ -1030,7 +1030,7 @@ header .cartCounter .dropdown-menu {
     width: 50px;
     height: 50px;
     text-align: center;
-    background-color: #A01769;
+    background-color: #182340;
     cursor: pointer;
     transition: opacity 0.2s ease-out;
     opacity: 0;

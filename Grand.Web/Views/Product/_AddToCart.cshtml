@@ -84,8 +84,8 @@
                     });
                 });
             </script>
-            <button type="button" id="add-to-cart-button-@Model.ProductId" class="btn btn-info add-to-cart-button d-inline-flex" data-productid="@Model.ProductId" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;">
-                <span class="fa fa-shopping-cart d-sm-block"></span><span class="d-lg-block d-none">@addToCartText</span>
+            <button type="button" id="add-to-cart-button-@Model.ProductId" class="btn btn-info add-to-cart-button d-inline-flex" data-productid="@Model.ProductId" style="background-color:#354499" onclick="AjaxCart.addproducttocart_details('@Url.RouteUrl("AddProductToCart-Details", new { productId = Model.ProductId, shoppingCartTypeId = (int)ShoppingCartType.ShoppingCart })', '#product-details-form');return false;">
+                <i class="fa fa-cart-arrow-down"></i><span class="d-lg-block d-none">@addToCartText</span>
             </button>
         }
 

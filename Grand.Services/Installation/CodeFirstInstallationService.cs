@@ -4840,7 +4840,7 @@ namespace Grand.Services.Installation
                                            IsPasswordProtected = false,
                                            DisplayOrder = 1,
                                            Title = "Welcome to our store",
-                                           Body = "<p>Online shopping is the process consumers go through to purchase products or services over the Internet. You can edit this in the admin site.</p><p>If you have questions, see the <a href=\"http://www.grandnode.com/\">Documentation</a>, or post in the <a href=\"http://www.grandnode.com/boards/\">Forums</a> at <a href=\"http://www.grandnode.com\">grandnode.com</a></p>",
+                                           Body = "<p>Golden Sweets : pastry founded in 2011 in Sfax-Tunisia; The origin of her story is an ambitious and exceptional woman named Siwar Gouiaa, encouraged by her husband, known for her love and passion for sweet cakes and salty dishes inspired by pure Tunisian tradition. The founders of Golden Sweets have, for a long time, acquired unique experience in the traditional confection of Tunisian pastries, pastry chefs for several generations. With quality craftsmanship, Golden Sweets offers you a unique selection of Tunisian smooth pastries entirely handmade. </p>",
                                            TopicTemplateId = defaultTopicTemplate.Id
                                        },
                                    new Topic

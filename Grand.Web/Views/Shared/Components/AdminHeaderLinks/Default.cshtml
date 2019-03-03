@@ -13,9 +13,10 @@
         @if (Model.DisplayAdminLink)
         {
 
-                <a class="btn btn-outline-info administration d-none d-lg-flex" href="@Url.Content("~/Admin")">
-                    <span class="fa fa-cogs align-self-center pr-1"></span> <span class="d-none d-lg-block">@T("admin")</span>
-                </a>
+            <a class="btn btn-outline-info administration d-none d-lg-flex" href="@Url.Content("~/Admin")">
+                <i class="icon-settings align-self-center pr-1"></i>
+                <span class="d-none d-lg-block">@T("admin")</span>
+            </a>
         }
         @if (!string.IsNullOrEmpty(Model.EditPageUrl))
         {
@@ -37,7 +38,8 @@
         {
             <li class="nav-item col admin ico-login admin-icon d-flex d-lg-none align-items-center">
                 <a class="nav-link" href="@Url.Content("~/Admin")">
-                    <span class="fa fa-cogs align-self-center"></span>
+                    <i class="icon-settings align-self-center"></i>
+
                 </a>
                 <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("admin")</span>
             </li>

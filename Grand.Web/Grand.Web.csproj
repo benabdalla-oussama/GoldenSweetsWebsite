@@ -29,4 +29,22 @@
     <None Remove="App_Data\Settingsold.txt" />
     <None Remove="Themes\DefaultClean\Content\css\icm-icons.css" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\extras\jgestures.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\extras\jquery-ui-1.8.20.custom.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\extras\jquery.min.1.7.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\extras\jquery.mousewheel.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\extras\modernizr.2.5.3.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\compress.sh" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\hash.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\scissor.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\scissor.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\turn.html4.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\turn.html4.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\turn.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\turn.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\zoom.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\lib\zoom.min.js" />
+    <None Include="wwwroot\content\turnjs4\Catalog-Files\samples\magazine\js\magazine.js" />
+  </ItemGroup>
 </Project>

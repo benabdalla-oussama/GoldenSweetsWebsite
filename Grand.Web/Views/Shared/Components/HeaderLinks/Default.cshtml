@@ -5,26 +5,26 @@
 {
     <li class="nav-item">
         <a class="nav-link ico-account d-none d-lg-flex" href="@Url.RouteUrl("CustomerInfo")">
-            <span class="align-self-center"><span class="fa fa-user"></span></span>
+            <span class="align-self-center"><i class="icon-user" style=" margin-right: 5px;"></i></span>
             <span class="d-none d-lg-block">@T("Account.MyAccount")</span>
         </a>
     </li>
     <li class="nav-item d-none d-lg-block">
         <a class="nav-link ico-logout" href="@Url.RouteUrl("Logout")">
-            <span class="align-self-center"><span class="fa fa-power-off"></span></span>
+            <span class="align-self-center"><i class="icon-logout" style=" margin-right: 5px;"></i></span>
             <span class="d-none d-lg-block">@T("Account.Logout")</span>
         </a>
     </li>
     <li class="nav-item col d-flex d-lg-none align-self-start" id="mobile-hl-opener">
         <a class="ico-account nav-link d-flex justify-content-center" href="@Url.RouteUrl("CustomerInfo")">
-            <span class="align-self-center"><span class="fa fa-user"></span></span>
+            <span class="align-self-center"><i class="icon-user" style=" margin-right: 5px;"></i></span>
             <span class="d-none d-lg-block">@T("Account.MyAccount")</span>
             <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("Account.MyAccount")</span>
         </a>
     </li>
     <li class="nav-item col d-flex d-lg-none align-self-start">
         <a class="nav-link ico-logout" href="@Url.RouteUrl("Logout")">
-            <span class="align-self-center"><span class="fa fa-power-off"></span></span>
+            <span class="align-self-center"><i class="icon-logout" style=" margin-right: 5px;"></i></span>
             <span class="d-none d-lg-block">@T("Account.Logout")</span>
             <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("Account.Logout")</span>
         </a>
@@ -32,10 +32,13 @@
 }
 else
 {
-    <li class="nav-item d-none d-lg-block"><a class="nav-link ico-login" href="@Url.RouteUrl("Login")"><span class="fa fa-user align-self-center"></span><span class="d-none d-lg-block">@T("Account.Login")</span></a></li>
+    <li class="nav-item d-none d-lg-block"><a class="nav-link ico-login" href="@Url.RouteUrl("Login")">
+    
+    <i class="icon-user align-self-cente" style="padding-top: 3px; margin-right: 5px;"></i>
+        <span class="d-none d-lg-block">@T("Account.Login")</span></a></li>
     <li class="nav-item col d-flex d-lg-none justify-content-center align-self-start">
         <a class="nav-link ico-login admin" href="@Url.RouteUrl("Login")">
-            <span class="fa fa-user align-self-center"></span>
+            <i class="icon-user" style="margin-right: 5px;    padding-top: 3px; margin-right: 5px;"></i>
             <span class="d-none d-lg-block">@T("Account.Login")</span>
             <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("Account.Login")</span>
         </a>
@@ -57,7 +60,8 @@ else
     <li class="nav-item col wishlist-container">
         <a class="nav-link" href="@Url.RouteUrl("Wishlist")">
             <span class="wishlist-label align-self-center">
-                <span class="far fa-heart"></span>
+                @*<span class="far fa-heart"></span>*@
+                <i class="icon-heart" style=" margin-right: 5px;"></i>
             </span>
             <span class="d-none d-lg-block wish-name">
                 @T("Wishlist")
@@ -67,18 +71,18 @@ else
         </a>
     </li>
 }
-@if (Model.ShoppingCartEnabled)
+@if (Model.ShoppingCartEnabled) 
 {
     <li class="nav-item col" id="topcartlink">
         <div class="btn-group dropdown">
             <a class="nav-link dropdown-toggle">
                 <span class="cart-label align-self-center">
-                    <span class="fa fa-shopping-cart"></span>
+                    <i class="icon-basket" style=" margin-right: 5px;"></i>
                 </span>
                 <span class="d-none d-lg-block cart-name">
                     @T("ShoppingCart")
                 </span>
-                <span class="cart-qty">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
+                <span class="cart-qty" style=" margin-right: 5px;">@T("ShoppingCart.HeaderQuantity", Model.ShoppingCartItems)</span>
                 <span class="d-lg-none d-block text-muted mt-1 mobile-desc">@T("shoppingcart")</span>
             </a>
         </div>
